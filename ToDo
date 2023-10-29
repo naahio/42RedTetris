@@ -1,0 +1,30 @@
+| General Rules : 
+
+        > The project must be written totally in Javascript.
+
+        > The client code (browser) must be written without a call to "this".
+
+        >  the choice of the functional library (lodash, ramda, ...) to use it or not.
+
+        > The handling logic of the heap and pieces must be implemented as "pure functions".
+
+        >  "this" can be used to define its own subclasses of "Error".
+
+        > the server code must use object-oriented programming (prototype).
+
+        > The client application must be built from any JS frameworks.
+
+        > built exclusively from a grid or flexbox layout.
+
+        ```Prohibition to use:
+            • A DOM manipulation library like jQuery
+            • Canvas
+            • SVG (Scalable Vector Graphics).```
+
+        > There is no need to directly manipulate the DOM.
+
+        > Unit tests must cover at least 70% of the statements, functions, lines and at least 50% of branches .
+
+| Mandatory :
+
+    
