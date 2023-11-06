@@ -1,30 +1,61 @@
 | General Rules : 
-
         > The project must be written totally in Javascript.
-
         > The client code (browser) must be written without a call to "this".
-
         >  the choice of the functional library (lodash, ramda, ...) to use it or not.
-
         > The handling logic of the heap and pieces must be implemented as "pure functions".
-
         >  "this" can be used to define its own subclasses of "Error".
-
         > the server code must use object-oriented programming (prototype).
-
         > The client application must be built from any JS frameworks.
-
         > built exclusively from a grid or flexbox layout.
-
-        ```Prohibition to use:
-            • A DOM manipulation library like jQuery
-            • Canvas
-            • SVG (Scalable Vector Graphics).```
-
+            ```Prohibition to use:
+                • A DOM manipulation library like jQuery
+                • Canvas
+                • SVG (Scalable Vector Graphics).```
         > There is no need to directly manipulate the DOM.
-
         > Unit tests must cover at least 70% of the statements, functions, lines and at least 50% of branches .
 
 | Mandatory :
+    -- Game  :
+        #   Contain falling pieces as long as possible in a Playground.
+        #   The game is over when the field no longer offers enough room.
+        #   When one or more lines of land are complete, they disappear.
+        ### The game is played between several players.
+        #   Each player has his own playing field.
+        #   all players undergo the same series of pieces.
+        #   As soon as a player destroys lines on his ground, the opposing players receive n - 1 lines in penalty.
+        #   then indestructible, which fit at the bottom of their playground.
+        #   A terrain consists of 10 columns and 20 lines.
+        #   Each player can graphically observe the list of his opponents (name) and the specter of their land.
+        #   For each column, a spectrum indicates the first line occupied by a piece.
+        #   As soon as the terrain is updated, all opponents must visualize the evolution of their spectrum.
+        #   The game takes the historical tetriminos and their principles of rotation.
+        #   There is no score.
+        #   the last player of the game is the winner.
+        #   The game must be multi-part, but must also allow to play solo.
 
-    
+    -- Moving the pieces :
+        #   The pieces "go down" at a constant speed and frequency.
+        #   Left and right arrows: Horizontal move to the right or left.
+        #   Top arrow: Rotation (only one direction is enough).
+        #   Down arrow: Fall towards the pile.
+        #   Spacebar: Vertical move to position a piece in a hole in the pile.
+
+    -- Tetris : the technical
+        #   The game relies on a client / server.
+        #   The server will be written with NodeJS.
+        #   Clients and server communicate via http.
+        #   The server will be in charge of:
+                • [Management of games and players].
+                • [Distribution of pieces for each game].
+                • [Scattering of spectra].
+        #   The communication between the server and the clients is event and bi-directional.
+        #   No data persistence is necessary.
+        #   You are encouraged to use functionnal components.
+        #   The client must implement a Single Page Application.
+
+    -- Game Management:
+        #   Each player connects to a game via a hash-based url type.
+            • http://<server_name_or_ip>:<port>/#<room>[<player_name>] : 
+                > room        : name of the game to join.
+                > player_name : name of the player.
+        #   
