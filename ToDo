@@ -7,10 +7,10 @@
         > the server code must use object-oriented programming (prototype).
         > The client application must be built from any JS frameworks.
         > built exclusively from a grid or flexbox layout.
-            ```Prohibition to use:
-                • A DOM manipulation library like jQuery
-                • Canvas
-                • SVG (Scalable Vector Graphics).```
+                Prohibition to use:
+                        • A DOM manipulation library like jQuery.
+                        • Canvas.
+                        • SVG (Scalable Vector Graphics).
         > There is no need to directly manipulate the DOM.
         > Unit tests must cover at least 70% of the statements, functions, lines and at least 50% of branches .
 
@@ -55,7 +55,7 @@
 
     --> Game Management :
         #   Each player connects to a game via a hash-based url type.
-            • http://<server_name_or_ip>:<port>/#<room>[<player_name>] : 
+            • http://<server_name_or_ip>:<port>/#<room>[<player_name>] :
                 > room        : name of the game to join.
                 > player_name : name of the player.
         #   The first to join a game, will be the person in charge of controling the game :
@@ -71,6 +71,7 @@
         #   the server is in charge of : 
                 > the game management.
                 > the coin distribution and scattering the pieces players’ fields.
+
     --> Client Construction :
         #   The client runs within a browser in a Single Page Application.
         #   At the first request, the browser retrieves a file from the server index.html 
@@ -89,4 +90,4 @@
                 • Asynchronous.
 
     -->  Boilerplate :
-        
+        #   
