@@ -5,19 +5,19 @@ function Header() {
     return(
         <header>
             <nav>
-                <div className='flex flex-row space-x-4 border-b h-18 bg-cyan-950'>
+                <div className='flex flex-row border-b'>
                     <div>
                         <img src="../images/LOGO.png"/>
                     </div>
                     <div className='flex flex-center '>
-                        <Link to="/contact">
-                            Contact
+                        <Link to="/">
+                            Home
                         </Link>
                         <Link to="/about">
                             About
                         </Link>
-                        <Link to="/">
-                            Home
+                        <Link to="/contact">
+                            Contact
                         </Link>
                     </div>
                     <div className='flex flex-row-reverse'>
