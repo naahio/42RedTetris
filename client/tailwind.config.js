@@ -28,6 +28,7 @@ module.exports = {
       },
       extend: {
         colors:{
+          white: '#FFFFFF',
           darkBlue0: '#0F1621',
           darkBlue1: '#121C2D',
           darkBlue2: '#17243B',
@@ -39,8 +40,9 @@ module.exports = {
           lightBlue: '51A9E3',
           lightGray: '#CCCCCC',
           lightOrange: '#FF7A00',
+          lightGray: '#eef2ff',
         }
-      },
+      }
   },
   plugins: [],
 }

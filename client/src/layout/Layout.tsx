@@ -1,3 +1,4 @@
+//@ts-ignore
 import React from 'react';
 import { ReactNode } from 'react';
 import Header from './Header.tsx';
@@ -9,9 +10,9 @@ export interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
     return (
-        <div>
+        <div className='flex flex-col w-[95%] max-w-[1121px]'>
             <Header />
-                <main>{children}</main>
+                <main className='flex h-[1135px]'>{children}</main>
             <Footer />
         </div>
     );

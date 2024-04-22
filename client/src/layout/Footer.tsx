@@ -1,9 +1,10 @@
+//@ts-ignore
 import React from 'react';
 
 function Footer() {
     return (
-        <footer>
-            <p>@42 Red Tetris</p>
+        <footer className='h-[50px]'>
+            <p className='text-white'>@42 Red Tetris</p>
         </footer>
     );
 }
