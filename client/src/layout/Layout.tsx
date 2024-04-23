@@ -12,7 +12,7 @@ function Layout({ children }: LayoutProps) {
     return (
         <div className='flex flex-col w-[95%] max-w-[1121px]'>
             <Header />
-                <main className='flex h-[1135px]'>{children}</main>
+                <main className='flex h-[1135px] border'>{children}</main>
             <Footer />
         </div>
     );
