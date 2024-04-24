@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {O} from './TetrisBlocks.tsx';
+// import {O} from './TetrisBlocks.tsx';
 
 const Square: React.FC = () => {
   return <div className={`w-[33px] h-[33px] border border-lightGray border-opacity-20 `}></div>;
@@ -54,11 +54,11 @@ function  TetrisBoard() {
   }, []);
 
   return (
-    // absolute top-0 left-0 w-full h-full z-10
+      // absolute top-0 left-0 w-full h-full z-10
     <div className="flex flex-wrap relative border-4 border-green-800 justify-around w-[100%] h-[100%]">
-      <O />
-      {/* {grid.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex">
+      {/* <O /> */}
+      {grid.map((row, rowIndex) => (
+        <div key={rowIndex} className="flex ">
           {row.map((square, colIndex) => (
             <div 
             key={colIndex} 
@@ -70,8 +70,8 @@ function  TetrisBoard() {
             {square}
           </div>
           ))}
-        </div> */}
-      {/* ))} */}
+        </div>
+      ))}
     </div>
   );
 };
