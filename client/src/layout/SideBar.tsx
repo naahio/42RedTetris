@@ -13,8 +13,8 @@ function Sidebar() {
 
     return (
         <aside>
-            <div className='md:hidden justify-between border-r h-full bg-darkBlue2 pt-1 flex-col border'>
-                <button className='border'>
+            <div className='md:hidden justify-between  h-full bg-darkBlue2 pt-1 flex-col '>
+                <button className=''>
                     <AiOutlineBars />
                 </button>
                 <div className='flex flex-col text-white space-y-4 mt-4'>

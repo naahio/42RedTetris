@@ -6,6 +6,7 @@ import ContactPage from './components/ContactPage.tsx';
 import AboutPage from './components/AboutPage.tsx';
 import HomePage from './components/HomePage.tsx';
 import Layout from './Layout/Layout.tsx';
+import Game from './components/game/GameBoad.tsx'
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" Component={HomePage}/>
           <Route path="/about" Component={AboutPage}/>
           <Route path="/contact" Component={ContactPage}/>
+          <Route path="/game" Component={Game}/>
         </Routes>
       </Layout>
     </Router>

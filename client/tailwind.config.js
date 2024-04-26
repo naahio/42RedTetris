@@ -41,6 +41,7 @@ module.exports = {
           lightGray: '#CCCCCC',
           lightOrange: '#FF7A00',
           lightGray: '#eef2ff',
+          sidebar:'#606B85'
         }
       }
   },

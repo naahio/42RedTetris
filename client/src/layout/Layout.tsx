@@ -10,9 +10,9 @@ export interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
     return (
-        <div className='flex flex-col w-[95%] max-w-[1121px] border-red-600'>
+        <div className='flex flex-col w-[100%] max-w-[1121px] '>
             <Header />
-                <main className='flex h-[1135px] border'>{children}</main>
+                <main className='flex justify-center h-[1135px] '>{children}</main>
             <Footer />
         </div>
     );
