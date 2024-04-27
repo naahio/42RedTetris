@@ -32,7 +32,7 @@ function Header() {
     return (
         <header>
             <nav className=''>
-                <div className='md:border-b bg-darkBlue0 md:bg-darkBlue2 relative'>
+                <div className='md:border-b border-sidebar bg-darkBlue0 md:bg-darkBlue2 relative'>
                     <div className='flex justify-center items-center px-4 py-2 '>
                         <div className='flex justify-center  md:w-[40%]'>
                             <Link to="/">
@@ -56,7 +56,7 @@ function Header() {
                             </div>
                         </div>
                             <div className='flex w-[70%] items-center justify-center min-w-[69px] max-w-[150px]'>
-                                <Link to="/game" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '>
+                                <Link to="/Queue" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '>
                                     <button className=''>
                                         play
                                     </button>
@@ -77,7 +77,7 @@ function Header() {
                                 <Link to="/about" className='block text-white hover:text-lightRed mt-2'>
                                     About us
                                 </Link>
-                                <Link to="/game" className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] '>
+                                <Link to="/Queue" className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] '>
                                     <button className=''>
                                         play
                                     </button>

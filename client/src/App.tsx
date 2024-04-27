@@ -2,11 +2,13 @@ import './App.css';
 //@ts-ignore
 import  React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ContactPage from './components/ContactPage.tsx';
-import AboutPage from './components/AboutPage.tsx';
-import HomePage from './components/HomePage.tsx';
-import Layout from './Layout/Layout.tsx';
-import Game from './components/game/GameBoad.tsx'
+import ContactPage from './components/ContactPage';
+import AboutPage from './components/AboutPage';
+import HomePage from './components/HomePage';
+import Layout from './layout/Layout';
+import Game from './components/game/GameBoad'
+import Queue from './components/game/Queue'
+import PracticeGame from './components/game/PracticeGame'
 function App() {
   return (
     <Router>
@@ -16,6 +18,8 @@ function App() {
           <Route path="/about" Component={AboutPage}/>
           <Route path="/contact" Component={ContactPage}/>
           <Route path="/game" Component={Game}/>
+          <Route path="/Queue" Component={Queue}/>
+          <Route path="/PracticeGame" Component={PracticeGame}/>
         </Routes>
       </Layout>
     </Router>

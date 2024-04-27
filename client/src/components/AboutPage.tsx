@@ -3,8 +3,8 @@ import React from 'react';
 
 function AboutPage() {
     return (
-        <div className="flex flex-col h-[60%] w-[80%] items-center text-base justify-between pt-[20px]">
-        <h3>Welcome to our project, RedTetris!</h3>
+        <div className="flex flex-col h-[60%] w-[80%] items-center text-base justify-between pt-[20px] cursor-none	">
+        <h3>Welcome to our project, <span className='text-xl text-lightRed'>RedTetris!</span></h3>
 
         <p>What is RedTetris?
         RedTetris is an exciting project developed as part of the 42 Network community. It is an online multiplayer version of the classic game Tetris. Our goal is to bring the timeless enjoyment of Tetris to a multiplayer platform, allowing players to compete against each other in real-time, adding a new dimension of challenge and fun to the game.
@@ -18,10 +18,10 @@ function AboutPage() {
         Join Us
         We invite you to join us on this journey as we continue to develop and improve RedTetris. Whether you're a seasoned Tetris player or new to the game, there's a place for you in our community. Connect with us, share your feedback, and let's shape the future of gaming together!
         </p>
-        <p>
-        Contact Us
-        Have questions, suggestions, or just want to say hello? Feel free to reach out to us at contact@redtetris.com. We'd love to hear from you!
-        </p>
+        <p>Contact Us :
+        Have questions, suggestions, or just want to say hello? Feel free to reach out to us at 
+        <p className='underline decoration-indigo-500 text-white hover:text-lightRed'>contact@redtetris.com </p>
+        <p >We'd love to hear from you ! Have Fun  \(^.^)/</p></p>
         </div>
     )
 }
