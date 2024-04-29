@@ -2,13 +2,13 @@ import './App.css';
 //@ts-ignore
 import  React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ContactPage from './components/ContactPage';
-import AboutPage from './components/AboutPage';
-import HomePage from './components/HomePage';
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
 import Layout from './layout/Layout';
-import Game from './components/game/GameBoad'
-import Queue from './components/game/Queue'
-import PracticeGame from './components/game/PracticeGame'
+import Game from './components/game/GameBoard'
+import Queue from './pages/game/Queue'
+import PracticeGame from './pages/game/PracticeGame'
 function App() {
   return (
     <Router>
