@@ -42,19 +42,23 @@ export const RadioInput = ({
 //   }
 function Queue() {
     let navigate = useNavigate();
+    //@ts-ignore
     function practiceGame() {
         navigate('/practiceGame');
       }
 
     const [normal, setNormalGame] = useState(false);
     const [Normaltype, setNormalTypeGame] = useState("");
+    //@ts-ignore
     const [Modetype, setModeTypeGame] = useState("");
+    //@ts-ignore
     const [modes, setModeGame] = useState(false);
-
+    
     const changeNormalType = (type: string) => {
         console.log(type);
         setNormalTypeGame(type);
     }
+    //@ts-ignore
     const changeModeType = (type: string) => {
         setModeTypeGame(type);
     }
@@ -98,42 +102,14 @@ function Queue() {
                         <div className="flex flex-col border w-[50%]">
                             <button className=" border border-lightRed active:bg-lightRed text-white p-2 self-center rounded-md max-w-[160px] mt-2" 
                                 onClick={() => changeView("mode")}>Modes</button>
-                                {modes && (<div className="flex flex-col m-2">
-                                    {(Modetype != "private" ) &&(<RadioInput
-                                        id="public"
-                                        label = "pubic"
-                                        onChange = {() => changeModeType("public")} 
-                                    />)}
-                                    {(Modetype != "public") && (<RadioInput
-                                        id="private"
-                                        label = "private"
-                                        onChange = {() => changeModeType("private")} 
-                                    />)}
-                                    {/* {type && (<div className="flex flex-col justify-end-end">
-                                    <RadioInput
-                                        id="Practice"
-                                        label = "Practice"
-                                        onChange = {changeType} 
-                                    />
-                                    <RadioInput
-                                        id="Speed Run"
-                                        label = "Speed Run"
-                                        onChange = {changeType} 
-                                    />
-                                    <RadioInput
-                                        id="Tactic"
-                                        label = "Tactic"
-                                        onChange = {changeType} 
-                                    />
-                                    </div>)} */}
-                                </div>)}
+                               
                             </div>
                     </div>
                     { 
                         
                         (<Link to="/PracticeGame"> <button className=" border border-lightRed 
                         active:bg-lightRed text-white p-2 self-center rounded-md max-w-[160px] mt-2" 
-                            >Play</button></Link>)}
+                            >Practice Game</button></Link>)}
                     </div>
             </div>
                 <div className="border-[0.2px] border-sidebar h-[75%] self-center"></div>

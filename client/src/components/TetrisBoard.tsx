@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import {O} from './TetrisBlocks.tsx';
-
 const Square: React.FC = () => {
   return <div className={`w-[32px] h-[32px]`}></div>;
 };
@@ -50,7 +48,6 @@ function  TetrisBoard() {
 
   return (
     <div className="flex flex-wrap relative justify-around">
-      {/* <O /> */}
       {grid.map((row, rowIndex) => (
         <div key={rowIndex} className="flex">
           {row.map((square, colIndex) => (

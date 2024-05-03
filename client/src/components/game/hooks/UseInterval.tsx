@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 
-export function useInerval(callback: ()=> void, delay: number | null): void{
+export function useInterval(callback: ()=> void, delay: number | null): void{
     const callbackRef = useRef(callback);
 
     useEffect(()=>{

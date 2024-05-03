@@ -22,6 +22,7 @@ export type BlockShape = boolean[][];
 type ShapesObj = {
     [key in Block]: {
       shape: BlockShape;
+      sz: number;
     };
   };
 
@@ -33,6 +34,7 @@ export const SHAPES: ShapesObj= {
           [true, true, true, true],
           [false, false, false, false],
         ],
+        sz: 4,
       },
       J: {
         shape: [
@@ -40,6 +42,7 @@ export const SHAPES: ShapesObj= {
           [true, false, false],
           [true, true, true],
         ],
+        sz: 3,
       },
       L: {
         shape: [
@@ -47,12 +50,14 @@ export const SHAPES: ShapesObj= {
           [false, false, true],
           [true, true, true],
         ],
+        sz: 3,
       },
       O: {
         shape: [
           [true, true],
           [true, true],
         ],
+        sz: 2,
       },
       S: {
         shape: [
@@ -60,6 +65,7 @@ export const SHAPES: ShapesObj= {
           [false, true, true],
           [true, true, false],
         ],
+        sz: 3,
       },
       T: {
         shape: [
@@ -67,6 +73,7 @@ export const SHAPES: ShapesObj= {
           [false, true, false],
           [true, true, true],
         ],
+        sz: 3,
       },
       Z: {
         shape: [
@@ -74,5 +81,6 @@ export const SHAPES: ShapesObj= {
           [true, true, false],
           [false, true, true],
         ],
+        sz: 3,
       },
 }
