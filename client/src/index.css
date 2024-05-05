@@ -50,21 +50,16 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
   background-color: #0F1621;
   font-family: "Aclonica", sans-serif;
-
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
-
 
 .board{
   border: 1px solid gray;
@@ -108,4 +103,16 @@ background-color: rgba(238, 230, 230, 0.119);
 }
 .cell.Z {
   background-color: rgb(227, 78, 78);
+}
+
+.upcoming {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  
+}
+
+.cell.hidden {
+  visibility: hidden;
 }

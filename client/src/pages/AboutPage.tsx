@@ -3,7 +3,7 @@ import React from 'react';
 
 function AboutPage() {
     return (
-        <div className="flex flex-col h-[60%] w-[80%] items-center text-base justify-between pt-[20px] cursor-none	">
+        <div className="flex flex-col h-[100%] w-[100%]  border text-white text-base items-center ">
         <h3>Welcome to our project, <span className='text-xl text-lightRed'>RedTetris!</span></h3>
 
         <p>What is RedTetris?

@@ -36,22 +36,12 @@ export const RadioInput = ({
     );
   };
 
-//   async function practiceGame() {
-//     const router = useRouter();
-    // router.push('/practiceGame');
-//   }
 function Queue() {
-    let navigate = useNavigate();
-    //@ts-ignore
-    function practiceGame() {
-        navigate('/practiceGame');
-      }
 
     const [normal, setNormalGame] = useState(false);
-    const [Normaltype, setNormalTypeGame] = useState("");
+    const [NormalType, setNormalTypeGame] = useState("");
     //@ts-ignore
-    const [Modetype, setModeTypeGame] = useState("");
-    //@ts-ignore
+    const [ModeType, setModeTypeGame] = useState("");
     const [modes, setModeGame] = useState(false);
     
     const changeNormalType = (type: string) => {
@@ -65,6 +55,7 @@ function Queue() {
 
     const changeView = (pick : string) => {
         if (pick === "normal") {
+            setNormalTypeGame("")
             setNormalGame(true);
             setModeGame(false);
         } else {
@@ -74,42 +65,59 @@ function Queue() {
     }
 
     return (
-        <div className="flex flex-row md:w-[1100px] h-[90%] bg-darkBlue2 mt-9 rounded-xl">
+        <div className="flex flex-row sx:w-[600px] md:w-[900px] text-white h-[90%] bg-darkBlue2 mt-9 rounded-xl">
             <div className="flex flex-col w-[45%]">
                 <div className="flex h-[60%] p-5">
                     <h2>Join public games : </h2>
                 </div>
                 <div className="border-[0.2px] border-sidebar w-[75%] self-center"></div>
-                <div className="flex p-5 flex-col">
-                    <h2>Start game : </h2>
-                    <div className="flex flex-row justify-around border m-2">
-                        <div className="flex flex-col border w-[50%]">
+                <div className="flex p-5 flex-col ">
+                    <h2 className="text-white">Start game : </h2>
+                    <div className="flex flex-row justify-around  m-2">
+                        <div className="flex flex-col  w-[50%]">
                             <button className="border border-lightRed active:bg-lightRed self-center text-white p-2 rounded-md max-w-[160px] mt-2 "
                                 onClick={() => changeView("normal")}>Normal</button>
                              {normal && (<div className=" flex flex-col m-2">
-                                {(Normaltype != "private") && (<RadioInput
+                                {(NormalType != "private") && (<RadioInput
                                     id="public"
                                     label = "pubic"
                                     onChange = {changeNormalType} 
                                     />)}
-                                {(Normaltype != "public") && (<RadioInput
+                                {(NormalType != "public") && (<RadioInput
                                     id="private"
                                     label = "private"
                                     onChange = {changeNormalType} 
                                     />)}
+                                  { 
+                       NormalType &&  
+                        (<Link to="/PracticeGame"> <button className=" border  border-lightRed 
+                        active:bg-lightRed text-white p-2  rounded-md max-w-[160px] mt-2" 
+                            >Start Game</button></Link>)}  
                             </div>)}
                         </div> 
-                        <div className="flex flex-col border w-[50%]">
+                        <div className="flex flex-col  w-[50%]">
                             <button className=" border border-lightRed active:bg-lightRed text-white p-2 self-center rounded-md max-w-[160px] mt-2" 
                                 onClick={() => changeView("mode")}>Modes</button>
                                
                             </div>
-                    </div>
+                        </div>
                     { 
-                        
-                        (<Link to="/PracticeGame"> <button className=" border border-lightRed 
-                        active:bg-lightRed text-white p-2 self-center rounded-md max-w-[160px] mt-2" 
-                            >Practice Game</button></Link>)}
+                       modes &&  
+                        (
+                        <div>
+                            <Link to="/PracticeGame"> <button className=" border  border-lightRed 
+                            active:bg-lightRed text-white p-2  rounded-md max-w-[160px] mt-2" 
+                            >Practice Game</button></Link>
+                            <Link to="/PracticeGame"> <button className=" border  border-lightRed 
+                            active:bg-lightRed text-white p-2  rounded-md max-w-[160px] mt-2" 
+                            >Time Rush</button></Link>
+                            <Link to="/PracticeGame"> <button className=" border  border-lightRed 
+                            active:bg-lightRed text-white p-2  rounded-md max-w-[160px] mt-2" 
+                            >Classic</button></Link>
+                        </div>
+                        )
+                    
+                    }
                     </div>
             </div>
                 <div className="border-[0.2px] border-sidebar h-[75%] self-center"></div>

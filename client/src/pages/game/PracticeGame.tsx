@@ -1,25 +1,29 @@
 
 import GameBoard from '../../components/game/GameBoard'
 import { useTetris } from '../../components/game/hooks/useTetris';
+import UpcomingBlocks from '../../components/game/UpcomingBlocks';
 
 function PracticeGame() {
 
-    const {board, startGame, isPlaying} = useTetris();
+    const {board, startGame, isPlaying, score, upcomingBlocks} = useTetris();
 
 
     return (
         <div className="flex flex-col text-white items-center justify-around">
-            <h2> Practice Game </h2>
+            <h2 className='text-xl'> Practice Game </h2>
             <div className='restart '>
                 {!isPlaying ? null:(
                 <button onClick={startGame} className='text-white hover:text-lightRed'>restart</button>
                 )}
             </div>
+            <h2>score : {score}</h2>
+
             <GameBoard currentBoard={board} />
             <div className='controls '>
-                {isPlaying ? null:(
-                    <button onClick={startGame} className='text-white hover:text-lightRed'>Start Game</button>
-                )}
+                {isPlaying ? 
+                    ( <UpcomingBlocks upcomingBlocks={upcomingBlocks} /> ) :
+                    (  <button onClick={startGame} className='text-white hover:text-lightRed'>Start Game</button> )
+                }
             </div>
         </div>
     )

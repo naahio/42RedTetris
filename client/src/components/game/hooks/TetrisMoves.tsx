@@ -86,12 +86,15 @@ function boardReducer(state: BoardState, action: Action): BoardState {
             break;
         case 'commit':
             return {
-                board: action.newBoard!,
-                droppingRow: 0,
-                droppingColum: 3,
-                droppingBlock: state.droppingBlock,
-                droppingShape: state.droppingShape,
-            }
+              board: [
+                ...getEmptyBoard(BOARD_HEIGHT - action.newBoard!.length),
+                ...action.newBoard!,
+              ],
+              droppingRow: 0,
+              droppingColum: 3,
+              droppingBlock: action.newBlock!,
+              droppingShape: SHAPES[action.newBlock!].shape,
+            };
         case 'move':
             const rotatedShape = action.isRotating ? rotateBlock(newState.droppingShape) : newState.droppingShape;
             let columnOffset = action.isPressingLeft ? -1 : 0;
