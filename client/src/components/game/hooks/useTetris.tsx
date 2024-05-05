@@ -3,14 +3,13 @@ import { BOARD_HEIGHT, getEmptyBoard, getRandomBlock, hasCollisions, TetrisMoves
 import { useInterval } from './UseInterval';
 import { Block, BlockShape, BoardShape, EmptyCell, SHAPES } from '../interfaces/types';
 
-
 enum TickSpeed {
     Normal = 800,
     Sliding = 100,
     Fast = 50,
   }
-
-export function useTetris() {
+  
+  export function useTetris() {
     const [score, setScore] = useState(0);
     const [upcomingBlocks, setUpcomingBlocks] = useState<Block[]>([]);
     const [isCommitting, setIsCommitting] = useState(false);
@@ -123,7 +122,7 @@ export function useTetris() {
   
       let isPressingLeft = false;
       let isPressingRight = false;
-      let moveIntervalID: NodeJS.Timeout | undefined;
+      let moveIntervalID: number | undefined;
   
       const updateMovementInterval = () => {
         clearInterval(moveIntervalID);
