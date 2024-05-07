@@ -1,10 +1,8 @@
-//@ts-ignore
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
-//@ts-ignore
-import { useNavigate } from "react-router-dom";
-
-
+import LeaderBoard from "../../components/game/LeaderBoard";
+import PublicRoom from "../../components/game/PublicRoom";
 
 export const RadioInput = ({
     id,
@@ -48,7 +46,8 @@ function Queue() {
         console.log(type);
         setNormalTypeGame(type);
     }
-    //@ts-ignore
+        //@ts-ignore
+
     const changeModeType = (type: string) => {
         setModeTypeGame(type);
     }
@@ -65,10 +64,11 @@ function Queue() {
     }
 
     return (
-        <div className="flex flex-row sx:w-[600px] md:w-[900px] text-white h-[90%] bg-darkBlue2 mt-9 rounded-xl">
+        <div className="flex flex-row w-[90%] text-white h-[90%] bg-darkBlue2 mt-9 rounded-xl">
             <div className="flex flex-col w-[45%]">
-                <div className="flex h-[60%] p-5">
+                <div className="flex flex-col h-[60%] p-5">
                     <h2>Join public games : </h2>
+                    <PublicRoom />
                 </div>
                 <div className="border-[0.2px] border-sidebar w-[75%] self-center"></div>
                 <div className="flex p-5 flex-col ">
@@ -120,17 +120,10 @@ function Queue() {
                     }
                     </div>
             </div>
-                <div className="border-[0.2px] border-sidebar h-[75%] self-center"></div>
-            <div className="flex p-5 flex-col">
-                <h2>Score Board : </h2>
-                    <span className="cursor-pointer hover:underline p-5 text-yellow-400"> 1 - player_1 :  15.876 pt</span>
-                    <span className="cursor-pointer hover:underline p-5 text-lightRed"> 2 - player_2 :  12.876 pt</span>
-                    <span className="cursor-pointer hover:underline p-5 text-lime-400"> 3 - player_3 :  10.876 pt</span>
-                    <span className="cursor-pointer hover:underline p-5 text-orange-500"> 4 - player_4 :  9.876 pt</span>
-                    <span className="cursor-pointer hover:underline p-5 text-pink-800"> 5 - player_5:  7.876 pt</span>
+                <div className="flex flex-col border-[0.2px] border-sidebar h-[75%] self-center"></div>
+                    <h2>Score Board : </h2>
+                    <LeaderBoard />
             </div>
-            </div>
-        // </div>
     )
 }
 
