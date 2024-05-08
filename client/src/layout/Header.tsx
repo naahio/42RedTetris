@@ -1,5 +1,5 @@
-//@ts-ignore
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import menu from '../assets/images/menu.png';
