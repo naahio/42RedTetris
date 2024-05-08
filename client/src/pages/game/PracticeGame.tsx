@@ -1,6 +1,6 @@
 
 import GameBoard from '../../components/game/GameBoard'
-import { useTetris } from '../../components/game/hooks/useTetris';
+import { useTetris } from '../../hooks/useTetris';
 import UpcomingBlocks from '../../components/game/UpcomingBlocks';
 
 function PracticeGame() {

@@ -1,5 +1,4 @@
-//@ts-ignore
-import React, { useRef } from 'react';
+
 import { Link } from 'react-router-dom';
 import { AiOutlineBars } from "react-icons/ai";
 

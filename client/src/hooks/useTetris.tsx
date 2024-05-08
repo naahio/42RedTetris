@@ -122,6 +122,7 @@ enum TickSpeed {
   
       let isPressingLeft = false;
       let isPressingRight = false;
+    
       let moveIntervalID: NodeJS.Timeout | undefined;
   
       const updateMovementInterval = () => {

@@ -1,5 +1,4 @@
-//@ts-ignore
-import React from 'react';
+
 import TetrisBoard from '../components/TetrisBoard.tsx';
 
 function HomePage() {

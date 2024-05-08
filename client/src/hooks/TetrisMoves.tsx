@@ -1,7 +1,5 @@
 import { Dispatch, useReducer } from "react";
 import { Block, BlockShape, BoardShape, EmptyCell, SHAPES } from "../interfaces/types"
-//@ts-ignore
-import { isSet } from "util/types";
 
 export const BOARD_WIDTH = 10;
 export const BOARD_HEIGHT = 20;
