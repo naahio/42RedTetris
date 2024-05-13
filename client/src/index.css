@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+* {
+  color: #fff;
+}
 
 .material-symbols-outlined {
   font-variation-settings:
