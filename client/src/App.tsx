@@ -3,9 +3,8 @@ import ContactPage from './pages/Contact';
 import AboutPage from './pages/About';
 import HomePage from './pages/Home';
 import Layout from './layout/Layout';
-// import Game from './components/game/GameBoard'
-import Queue from './pages/game/Queue'
-import PracticeGame from './pages/game/PracticeGame'
+import Queue from './pages/game/Queue';
+import GamePlay from './pages/game/GamePlay';
 function App() {
   return (
     <Router>
@@ -14,9 +13,8 @@ function App() {
           <Route path="/" Component={HomePage}/>
           <Route path="/about" Component={AboutPage}/>
           <Route path="/contact" Component={ContactPage}/>
-          {/* <Route path="/game" Component={Game}/> */}
           <Route path="/Queue" Component={Queue}/>
-          <Route path="/PracticeGame" Component={PracticeGame}/>
+          <Route path="/GamePlay" Component={GamePlay}/>
         </Routes>
       </Layout>
     </Router>

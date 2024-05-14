@@ -10,3 +10,11 @@ export type Player ={
     nickname:string;
     score?:number;
 }
+
+export type Game ={
+    id: string;
+    master: Player;
+    type: string;
+    mode: string;
+    players: Array<Player>;
+}
