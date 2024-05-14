@@ -1,4 +1,4 @@
-import { Game } from "../../interfaces/Data";
+import { Game } from "../../interfaces/data";
 
 interface GameInfoProps {
     game: Game;

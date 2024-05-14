@@ -1,27 +1,26 @@
-import axios, { AxiosResponse } from "axios";
-import { Room } from "../../interfaces/Data";
-import { useEffect, useState } from "react";
+import axios, { AxiosResponse } from 'axios';
+import { Room } from '../../interfaces/data';
+import { useEffect, useState } from 'react';
 
 function PublicRoom() {
-    const [rooms, setRooms] = useState<Room[]>([]);
+  const [rooms, setRooms] = useState<Room[]>([]);
 
-    useEffect(() => {
-        const fetchRooms = async () => {
-            try {
-                const response: AxiosResponse = await axios.get('http://localhost:3004/Room');
-                if (response.status === 200) {
-                    setRooms(response.data);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        };
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const response: AxiosResponse = await axios.get('http://localhost:3004/Room');
+        if (response.status === 200) {
+          setRooms(response.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-        fetchRooms();
+    fetchRooms();
 
-        return () => {
-        };
-    }, []);
+    return () => {};
+  }, []);
 
     return (
         <div id="style-5" className="flex flex-col scrollbar  overflow-hidden overflow-y-auto scroll-hidden scrollbar-hide">

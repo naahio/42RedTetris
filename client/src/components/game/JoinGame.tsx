@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Flex, RadioChangeEvent } from "antd";
 import { Radio } from "antd";
-import { Game, Player } from "../../interfaces/Data";
+import { Game, Player } from "../../interfaces/data";
 
 const JoinGame = () => {
   const master: Player ={
