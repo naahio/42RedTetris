@@ -13,7 +13,7 @@ function Queue() {
                     <PublicRoom />
                 </div>
                 <div className="border-[0.2px] border-sidebar w-[75%] self-center"></div>
-                <div className="flex p-5 flex-col ">
+                <div className="flex p-5 flex-col h-[45%]">
                     <h2 className="text-white">Start game : </h2>
                     <JoinGame />
                 </div>

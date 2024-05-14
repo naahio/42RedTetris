@@ -67,7 +67,7 @@ function Header() {
                     </div>
                     {isSmallScreen && menuOpen && (
                         <div className="absolute top-full left-0 w-full bg-darkBlue2 mt-[24px] flex items-end justify-center">
-                            <div className="px-4 py-2">
+                            <div className="flex flex-col px-4 py-2 border items-center justify-center">
                                 <Link to="/" className='block text-white hover:text-lightRed'>
                                     Home
                                 </Link>
