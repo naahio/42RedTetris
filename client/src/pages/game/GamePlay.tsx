@@ -2,9 +2,14 @@
 import GameBoard from '../../components/game/GameBoard'
 import { useTetris } from '../../hooks/useTetris';
 import UpcomingBlocks from '../../components/game/UpcomingBlocks';
+import { Game } from "../../interfaces/Data";
+import { useLocation } from 'react-router-dom';
+import { GameInfo } from '../../components/game/GameInfo';
 
-function PracticeGame() {
+function GamePlay() {
 
+    const { state } = useLocation()
+    const game: Game = state.game;
     const {board, startGame, isPlaying, score, upcomingBlocks} = useTetris();
 
 
@@ -16,6 +21,7 @@ function PracticeGame() {
                 <button onClick={startGame} className='text-white hover:text-lightRed'>restart</button>
                 )}
             </div>
+            <GameInfo game={game} />
             <h2>score : {score}</h2>
 
             <GameBoard currentBoard={board} />
@@ -29,5 +35,5 @@ function PracticeGame() {
     )
 }
 
-export default PracticeGame;
+export default GamePlay;
 

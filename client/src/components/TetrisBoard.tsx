@@ -34,6 +34,7 @@ function  TetrisBoard() {
     setGrid(newGrid);
   };
   useEffect(() => {
+    generateGrid();
     const handleResize = () => {
       generateGrid();
     };
