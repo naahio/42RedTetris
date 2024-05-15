@@ -42,7 +42,7 @@ module.exports = {
           lightOrange: '#FF7A00',
           lightGray: '#eef2ff',
           sidebar:'#606B85',
-          joinBlue: '#51A9E3'
+          joinBlue: '#51A9E3',
         }
       }
   },

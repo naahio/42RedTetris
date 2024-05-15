@@ -31,7 +31,6 @@
   background-color: #51A9E3;
 }
 
-
 .aclonica-regular {
   font-family: "Aclonica", sans-serif;
   font-weight: 400;
@@ -56,58 +55,66 @@ h1 {
   line-height: 1.1;
 }
 
-.board{
-  border: 1px solid gray;
-  user-select: none;
+button {
+  padding: 4px;
 }
 
-.row{
+.board {
+  border: 2px solid black;
+  user-select: none;
+  margin: auto;
+  grid-area: game;
+}
+
+.row {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .cell {
   width: 30px;
   aspect-ratio: 1;
-  border: 0.5px solid gray;
+  border: 1px solid black;
 }
 
+.cell.hiddenCells {
+  visibility: hidden;
+}
 
 .cell.Empty {
-background-color: rgba(238, 230, 230, 0.119);
+  background-color: rgb(200, 200, 200);
 }
 
 .cell.I {
-  background-color: rgb(80, 227, 230);
+  background-color: rgb(32, 61, 62);
+  border-radius: 5px;
 }
+
 .cell.J {
-  background-color: rgb(36, 95, 223);
+  background-color: rgb(10, 56, 155);
+  border-radius: 5px;
 }
+
 .cell.L {
-  background-color: rgb(223, 17, 36);
+  background-color: rgb(151, 113, 9);
+  border-radius: 5px;
 }
+
 .cell.O {
-  background-color: rgb(223, 21, 36);
+  background-color: rgb(180, 37, 180);
+  border-radius: 5px;
 }
+
 .cell.S {
-  background-color: rgb(48, 211, 56);
+  background-color: rgb(16, 110, 21);
+  border-radius: 5px;
 }
+
 .cell.T {
-  background-color: rgb(132, 61, 198);
+  background-color: rgb(69, 19, 116);
+  border-radius: 5px;
 }
+
 .cell.Z {
-  background-color: rgb(227, 78, 78);
-}
-
-.upcoming {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  gap: 10px;
-  
-}
-
-.cell.hidden {
-  visibility: hidden;
+  background-color: rgb(208, 12, 12);
+  border-radius: 5px;
 }

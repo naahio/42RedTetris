@@ -3,20 +3,20 @@ import { BoardShape } from "../../interfaces/types";
 
 interface Props {
     currentBoard: BoardShape;
-}
-
-function GameBoard({currentBoard}: Props) {
+  }
+  
+  function Board({ currentBoard }: Props) {
     return (
-        <div className="board">
-            {currentBoard.map((row, rowIndex) => (
-                    <div key={rowIndex} className="row">
-                        {row.map((cell, colIndex) => (
-                            <Cell key={`${rowIndex}-${colIndex}`} type={cell} />
-                        ))}
-                    </div>
-                ))}
-        </div>
+      <div className="board">
+        {currentBoard.map((row, rowIndex) => (
+          <div className="row" key={`${rowIndex}`}>
+            {row.map((cell, colIndex) => (
+              <Cell key={`${rowIndex}-${colIndex}`} type={cell} />
+            ))}
+          </div>
+        ))}
+      </div>
     );
-}
-
-export default GameBoard;
+  }
+  
+  export default Board;
