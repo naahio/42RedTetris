@@ -1,30 +1,28 @@
-import { useEffect, useState } from "react";
-import { Player } from "../../interfaces/Data";
-import axios from "axios";
-import profile from "../../assets/images/profile.jpg";
-import { Link } from "react-router-dom";
-
+import { useEffect, useState } from 'react';
+import { Player } from '../../interfaces/data';
+import axios from 'axios';
+import profile from '../../assets/images/profile.jpg';
+import { Link } from 'react-router-dom';
 
 function LeaderBoard() {
-    const [players, setPlayers] = useState<Player[]>([]);
+  const [players, setPlayers] = useState<Player[]>([]);
 
-    useEffect(() => {
-        const fetchPlayers = async () => {
-            try {
-                const response = await axios.get('http://localhost:3004/Players');
-                if (response.status === 200) {
-                    setPlayers(response.data);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        };
+  useEffect(() => {
+    const fetchPlayers = async () => {
+      try {
+        const response = await axios.get('http://localhost:3004/Players');
+        if (response.status === 200) {
+          setPlayers(response.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-        fetchPlayers();
+    fetchPlayers();
 
-        return () => {
-        };
-    }, [])
+    return () => {};
+  }, []);
 
     return (
         <div id="style-5" className="flex flex-col items-center text-base h-full scrollbar  overflow-hidden overflow-y-auto scroll-hidden scrollbar-hide ">

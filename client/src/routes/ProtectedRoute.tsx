@@ -1,6 +1,4 @@
 import { Outlet, Navigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-
 interface ProtectedRouteProps {
   isAccessible?: boolean;
   redirectTo?: string;

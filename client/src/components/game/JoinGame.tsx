@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Game, Player } from "../../interfaces/Data";
+import { Game, Player } from "../../interfaces/data";
 
 const JoinGame = () => {
   const master: Player = {
@@ -12,8 +12,8 @@ const JoinGame = () => {
   const [type, setType] = useState("public");
   const navigate = useNavigate();
 
-  const handleModeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMode(e.target.value);
+  const handleModeChange = (newMode: string) => {
+    setMode(newMode);
   };
 
   const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,42 +36,30 @@ const JoinGame = () => {
       <div className="flex flex-col m-2">
         <h2>Modes: </h2>
         <div className="flex space-x-2">
-          <label>
-            <input
-              type="radio"
-              value="Normal"
-              checked={mode === "Normal"}
-              onChange={handleModeChange}
-            />
+          <button
+            className={`py-2 px-4 rounded ${mode === "Normal" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            onClick={() => handleModeChange("Normal")}
+          >
             Normal
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="Practice"
-              checked={mode === "Practice"}
-              onChange={handleModeChange}
-            />
+          </button>
+          <button
+            className={`py-2 px-4 rounded ${mode === "Practice" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            onClick={() => handleModeChange("Practice")}
+          >
             Practice
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="Time Rush"
-              checked={mode === "Time Rush"}
-              onChange={handleModeChange}
-            />
+          </button>
+          <button
+            className={`py-2 px-4 rounded ${mode === "Time Rush" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            onClick={() => handleModeChange("Time Rush")}
+          >
             Time Rush
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="Classic"
-              checked={mode === "Classic"}
-              onChange={handleModeChange}
-            />
+          </button>
+          <button
+            className={`py-2 px-4 rounded ${mode === "Classic" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            onClick={() => handleModeChange("Classic")}
+          >
             Classic
-          </label>
+          </button>
         </div>
       </div>
       <div className="flex flex-col m-2">
