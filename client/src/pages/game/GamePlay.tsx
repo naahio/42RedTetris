@@ -4,7 +4,7 @@ import { useTetris } from '../../hooks/useTetris';
 import UpcomingBlocks from '../../components/game/UpcomingBlocks';
 import { Game } from "../../interfaces/Data";
 import { useLocation } from 'react-router-dom';
-import { GameInfo } from '../../components/game/GameInfo';
+// import { GameInfo } from '../../components/game/GameInfo';
 import HoldBlock from '../../components/game/HoldBlock';
 
 function GamePlay() {
@@ -17,6 +17,7 @@ function GamePlay() {
     return (
         <div className="flex  flex-col text-white items-center justify-center border w-[100%] ">
             <div className='flex '>
+                {game.mode}
                 <GameBoard currentBoard={board} />
                 {isPlaying ? 
                     ( 
