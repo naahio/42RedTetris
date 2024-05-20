@@ -1,48 +1,90 @@
 {
     "Room": [
         {
+            "mode": "RANKED",
             "id": "1",
             "uuID": "B9fj0X",
             "master": "Player1",
             "members": "4"
         },
         {
+            "mode": "time rush",
             "id": "2",
             "uuID": "cmVBXY",
             "master": "Player2",
             "members": "34"
         },
         {
+            "mode": "classic",
             "id": "3",
             "uuID": "2m8TVh",
             "master": "Player3",
             "members": "2"
         },
         {
+            "mode": "classic",
             "id": "4",
             "uuID": "6qUOqn",
             "master": "Player4",
             "members": "1"
         },
         {
+            "mode": "classic",
             "id": "5",
             "uuID": "UE0Bks",
             "master": "Player5",
             "members": "11"
         },
         {
+            "mode": "time rush",
             "id": "6",
             "uuID": "UE0Bks",
             "master": "Player6",
             "members": "11"
         },
         {
+            "mode": "time rush",
             "id": "7",
             "uuID": "UE0Bks",
             "master": "Player7",
             "members": "11"
         },
         {
+            "mode": "time rush",
+            "id": "8",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "time rush",
+            "id": "8",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "8",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "8",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "id": "8",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
@@ -61,6 +103,7 @@
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
@@ -73,78 +116,56 @@
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
+            "mode": "MODE",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
+            "mode": "MODE",
             "id": "9",
             "uuID": "UE0Bks",
             "master": "Player9",

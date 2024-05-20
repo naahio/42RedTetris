@@ -19,7 +19,7 @@ module.exports = {
           'sx': '380px',
           'sm': '640px',
           'md': '768px',
-          'tx': '800px',
+          'tx': '900px',
           'lg': '1024px',
           'hl': '1141px',
           'xl': '1280px',
@@ -43,6 +43,8 @@ module.exports = {
           lightGray: '#eef2ff',
           sidebar:'#606B85',
           joinBlue: '#51A9E3',
+          nextBlock: '#21314D',
+          nextBlockbg: "#12"
         }
       }
   },

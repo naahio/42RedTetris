@@ -63,7 +63,7 @@ button {
 }
 
 .board {
-  border: 2px solid black;
+  border: 2px solid #141F32;
   user-select: none;
   margin: auto;
   grid-area: game;
@@ -76,7 +76,7 @@ button {
 .cell {
   width: 30px;
   aspect-ratio: 1;
-  border: 1px solid black;
+  border: 1px solid #141F32;
 }
 
 .cell.hiddenCells {
@@ -84,7 +84,7 @@ button {
 }
 
 .cell.Empty {
-  background-color: rgb(200, 200, 200);
+  background-color: #17243B;
 }
 
 .cell.I {

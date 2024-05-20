@@ -12,6 +12,7 @@ enum TickSpeed {
 
 export function useTetris() {
   const [score, setScore] = useState(0);
+  const [ClearedLines, setClearedLines] = useState(0);
   const [upcomingBlocks, setUpcomingBlocks] = useState<Block[]>([]);
   const [isCommitting, setIsCommitting] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -55,6 +56,7 @@ export function useTetris() {
     for (let row = BOARD_HEIGHT - 1; row >= 0; row--) {
       if (newBoard[row].every((entry) => entry !== EmptyCell.Empty)) {
         numCleared++;
+        setClearedLines(numCleared);
         newBoard.splice(row, 1);
       }
     }
@@ -215,6 +217,7 @@ export function useTetris() {
     isPlaying,
     score,
     upcomingBlocks,
+    ClearedLines,
   };
 }
 

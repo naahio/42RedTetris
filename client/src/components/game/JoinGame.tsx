@@ -35,27 +35,27 @@ const JoinGame = () => {
     <div className="flex flex-col m-2">
       <div className="flex flex-col m-2">
         <h2>Modes: </h2>
-        <div className="flex space-x-2">
+        <div className="flex flex-col tx:flex-row space-y-2 tx:space-x-2 items-center">
           <button
-            className={`py-2 px-4 rounded ${mode === "Normal" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Normal" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
             onClick={() => handleModeChange("Normal")}
           >
             Normal
           </button>
           <button
-            className={`py-2 px-4 rounded ${mode === "Practice" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Practice" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
             onClick={() => handleModeChange("Practice")}
           >
             Practice
           </button>
           <button
-            className={`py-2 px-4 rounded ${mode === "Time Rush" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Time Rush" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
             onClick={() => handleModeChange("Time Rush")}
           >
             Time Rush
           </button>
           <button
-            className={`py-2 px-4 rounded ${mode === "Classic" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Classic" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
             onClick={() => handleModeChange("Classic")}
           >
             Classic
@@ -65,7 +65,7 @@ const JoinGame = () => {
       <div className="flex flex-col m-2">
         <h2>Type: </h2>
         <div className="flex space-x-2">
-          <label>
+          <label>         
             <input
               type="radio"
               value="public"

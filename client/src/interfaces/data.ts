@@ -1,4 +1,5 @@
 export type Room = {
+    mode: string;
     id: number;
     uuID: string;
     master: string;

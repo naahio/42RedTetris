@@ -1,98 +1,46 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Game, Player } from "../../interfaces/data";
 
-const JoinGame = () => {
-  const master: Player = {
-    id: 1,
-    nickname: "Naahio",
-    score: 0,
-  };
-  const [mode, setMode] = useState("Normal");
-  const [type, setType] = useState("public");
-  const navigate = useNavigate();
+import GameBoard from '../../components/game/GameBoard'
+import { useTetris } from '../../hooks/useTetris';
+import UpcomingBlocks from '../../components/game/UpcomingBlocks';
+import { Game } from "../../interfaces/data";
+import { useLocation } from 'react-router-dom';
+// import { GameInfo } from '../../components/game/GameInfo';
 
-  const handleModeChange = (newMode: string) => {
-    setMode(newMode);
-  };
+function GamePlay() {
 
-  const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setType(e.target.value);
-  };
+    const { state } = useLocation()
+    const game: Game = state.game;
+    const {board, startGame, isPlaying, score, upcomingBlocks, ClearedLines} = useTetris();
+    {/* <div className='restart '>
+        {!isPlaying ? null:(
+        <button onClick={startGame} className='text-white hover:text-lightRed'>restart</button>
+        )}
+    </div> */}
 
-  const createGame = () => {
-    const game: Game = {
-      id: "RF78Fd",
-      master: master,
-      type: type,
-      mode: mode,
-      players: [master],
-    };
-    navigate("/GamePlay", { state: { game } });
-  };
 
-  return (
-    <div className="flex flex-col m-2">
-      <div className="flex flex-col m-2">
-        <h2>Modes: </h2>
-        <div className="flex space-x-2">
-          <button
-            className={`py-2 px-4 rounded ${mode === "Normal" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-            onClick={() => handleModeChange("Normal")}
-          >
-            Normal
-          </button>
-          <button
-            className={`py-2 px-4 rounded ${mode === "Practice" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-            onClick={() => handleModeChange("Practice")}
-          >
-            Practice
-          </button>
-          <button
-            className={`py-2 px-4 rounded ${mode === "Time Rush" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-            onClick={() => handleModeChange("Time Rush")}
-          >
-            Time Rush
-          </button>
-          <button
-            className={`py-2 px-4 rounded ${mode === "Classic" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-            onClick={() => handleModeChange("Classic")}
-          >
-            Classic
-          </button>
+    return (
+        <div className="flex flex-col text-white items-center justify-center w-full rounded-lg bg-darkBlue1">
+            <h2 className='text-xl'> {game.mode} Game </h2>
+
+            <div className={`controls flex w-[45%] min-w-[439px]rounded-lg justify-center bg-darkBlue2 ${isPlaying ? "flex-row space-x-2" : "flex-col h-[60%]"}`}>
+              <GameBoard currentBoard={board} />
+                {isPlaying ? 
+                    (
+                      <div className='flex flex-col w-[40%] justify-around'>
+                        <UpcomingBlocks upcomingBlocks={upcomingBlocks} />
+                        <div className='flex flex-col bg-darkBlue3 rounded-md items-center justify-center h-[20%]'>
+                          <h2> score</h2>
+                          <p className='border rounded-lg w-[80%] text-center'>{score}</p>
+                          <h2> Lines</h2>
+                          <p className='border rounded-lg w-[80%] text-center'>{ClearedLines}</p>
+                        </div>
+                      </div>
+                  ) :
+                    (  <button onClick={startGame} className='text-white border max-h-[10%] self-center border-lightRed rounded-md hover:bg-lightRed'>Start Game</button> )
+                }
+            </div>
         </div>
-      </div>
-      <div className="flex flex-col m-2">
-        <h2>Type: </h2>
-        <div className="flex space-x-2">
-          <label>
-            <input
-              type="radio"
-              value="public"
-              checked={type === "public"}
-              onChange={handleTypeChange}
-            />
-            public
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="private"
-              checked={type === "private"}
-              onChange={handleTypeChange}
-            />
-            private
-          </label>
-        </div>
-      </div>
-      <button
-        className="rounded-md w-[30%] h-[40%] self-center bg-lightRed"
-        onClick={createGame}
-      >
-        Start
-      </button>
-    </div>
-  );
-};
+    )
+}
 
-export default JoinGame;
+export default GamePlay;
