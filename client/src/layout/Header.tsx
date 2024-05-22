@@ -12,10 +12,10 @@ function Header() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 768); // Adjust the breakpoint as needed (768 is typical for tablets)
+            setIsSmallScreen(window.innerWidth <= 768);
         };
 
-        handleResize(); // Call once to set initial state
+        handleResize();
         window.addEventListener('resize', handleResize);
 
         return () => {
