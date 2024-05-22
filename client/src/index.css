@@ -45,12 +45,22 @@
 
 }
 
+.input-placeholder::placeholder {
+  font-size: 0.75rem;
+  color: #a0a0a0;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #0F1621;
   font-family: "Aclonica", sans-serif;
+}
+
+input {
+  border-radius: 2px solid black;
+  background-color: transparent;
 }
 
 h1 {
