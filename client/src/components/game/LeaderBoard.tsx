@@ -28,7 +28,7 @@ function LeaderBoard() {
         <div id="style-5" className="flex flex-col items-center text-base h-full scrollbar  overflow-hidden overflow-y-auto scroll-hidden scrollbar-hide ">
             {
                 players.map((player: Player) => (
-                    <Link to="" className="flex flex-row py-2 bg-darkBlue3 hover:bg-lightRed w-[90%] rounded-xl justify-around items-center mt-2 h-[15%]">
+                    <Link to=""  key={player.id} className="flex flex-row py-2 bg-darkBlue3 hover:bg-lightRed w-[90%] rounded-xl justify-around items-center mt-2 h-[15%]">
                     {/* <div key={player.id} className="flex flex-row w-[100%] border rounded-xl"> */}
                         <h2>{player.id}</h2>
                         <img src={profile} className=" border border-lightRed rounded-full w-[34px] tx:w-[42px] tx:h-[42px] "/>

@@ -69,7 +69,7 @@ function Header() {
                                 </div>
                                 <div className='flex w-[70%] items-center justify-center min-w-[69px] max-w-[150px]'>
                                     <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '>
-                                        <button className='' onClick={handlePlayClick}>
+                                 http://localhost:5173/Queue       <button className='' onClick={handlePlayClick}>
                                             play
                                         </button>
                                     </Link>
@@ -106,7 +106,7 @@ function Header() {
                     </div>
                 )}
             </nav>
-            {showSignup && <Signup/>}
+            {showSignup && <Signup showSignup={showSignup} setShowSignup={setShowSignup} />}
         </header>
     );
 }
