@@ -1,4 +1,4 @@
-import { Game } from "../../interfaces/Data";
+import { Game } from "../../interfaces/data";
 
 interface GameInfoProps {
     game: Game;
@@ -7,7 +7,6 @@ interface GameInfoProps {
 export const GameInfo: React.FC<GameInfoProps> = ({ game }) => {
     return (
         <div>
-            <h3>Mode : {game.mode}</h3>
             <h3>type : {game.type}</h3>
             <h3>master : {game.master.nickname}</h3>
         </div>

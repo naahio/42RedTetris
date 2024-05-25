@@ -1,151 +1,174 @@
 {
     "Room": [
         {
+            "mode": "RANKED",
             "id": "1",
             "uuID": "B9fj0X",
             "master": "Player1",
             "members": "4"
         },
         {
+            "mode": "time rush",
             "id": "2",
             "uuID": "cmVBXY",
             "master": "Player2",
             "members": "34"
         },
         {
+            "mode": "classic",
             "id": "3",
             "uuID": "2m8TVh",
             "master": "Player3",
             "members": "2"
         },
         {
+            "mode": "classic",
             "id": "4",
             "uuID": "6qUOqn",
             "master": "Player4",
             "members": "1"
         },
         {
+            "mode": "classic",
             "id": "5",
             "uuID": "UE0Bks",
             "master": "Player5",
             "members": "11"
         },
         {
+            "mode": "time rush",
             "id": "6",
             "uuID": "UE0Bks",
             "master": "Player6",
             "members": "11"
         },
         {
+            "mode": "time rush",
             "id": "7",
             "uuID": "UE0Bks",
             "master": "Player7",
             "members": "11"
         },
         {
+            "mode": "time rush",
             "id": "8",
             "uuID": "UE0Bks",
             "master": "Player8",
             "members": "11"
         },
         {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
-            "id": "8",
-            "uuID": "UE0Bks",
-            "master": "Player8",
-            "members": "11"
-        },
-        {
+            "mode": "time rush",
             "id": "9",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "10",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "11",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "id": "12",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "13",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "25",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "id": "14",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "15",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "16",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "17",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "18",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "19",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "20",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "21",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "22",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "23",
+            "uuID": "UE0Bks",
+            "master": "Player8",
+            "members": "11"
+        },
+        {
+            "mode": "MODE",
+            "id": "24",
             "uuID": "UE0Bks",
             "master": "Player9",
             "members": "11"
@@ -178,97 +201,97 @@
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "6",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "7",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "8",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "9",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "10",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "11",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "12",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "13",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "14",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "15",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "16",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "17",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "18",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "19",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "20",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "21",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "22",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "23",
             "nickname": "Player5",
             "score": "3562"
         },
         {
-            "id": "5",
+            "id": "24",
             "nickname": "Player5",
             "score": "35620"
         }

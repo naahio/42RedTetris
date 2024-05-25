@@ -1,34 +1,32 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Flex, RadioChangeEvent } from "antd";
-import { Radio } from "antd";
-import { Game, Player } from "../../interfaces/Data";
+import { Game, Player } from "../../interfaces/data";
 
 const JoinGame = () => {
-  const master: Player ={
+  const master: Player = {
     id: 1,
     nickname: "Naahio",
     score: 0,
-  }
+  };
   const [mode, setMode] = useState("Normal");
   const [type, setType] = useState("public");
   const navigate = useNavigate();
 
-  const handleModeChange = (e: RadioChangeEvent) => {
-    setMode(e.target.value);
+  const handleModeChange = (newMode: string) => {
+    setMode(newMode);
   };
 
-  const handleTypeChange = (e: RadioChangeEvent) => {
+  const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setType(e.target.value);
   };
 
   const createGame = () => {
     const game: Game = {
-    id: "RF78Fd",
-    master: master,
-    type: type,
-    mode: mode,
-    players: [master],
+      id: "RF78Fd",
+      master: master,
+      type: type,
+      mode: mode,
+      players: [master],
     };
     navigate("/GamePlay", { state: { game } });
   };
@@ -37,35 +35,55 @@ const JoinGame = () => {
     <div className="flex flex-col m-2">
       <div className="flex flex-col m-2">
         <h2>Modes: </h2>
-        <Flex vertical gap="middle" className="flex m-3">
-          <Radio.Group
-            defaultValue="Normal"
-            buttonStyle="solid"
-            className="space-x-2"
-            onChange={handleModeChange}
-            value={mode}
+        <div className="flex flex-col tx:flex-row space-y-2 tx:space-x-2 items-center">
+          <button
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Normal" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
+            onClick={() => handleModeChange("Normal")}
           >
-            <Radio.Button value="Normal">Normal</Radio.Button>
-            <Radio.Button value="Practice">Practice</Radio.Button>
-            <Radio.Button value="Time Rush">Time Rush</Radio.Button>
-            <Radio.Button value="Classic">Classic</Radio.Button>
-          </Radio.Group>
-        </Flex>
+            Normal
+          </button>
+          <button
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Practice" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
+            onClick={() => handleModeChange("Practice")}
+          >
+            Practice
+          </button>
+          <button
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Time Rush" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
+            onClick={() => handleModeChange("Time Rush")}
+          >
+            Time Rush
+          </button>
+          <button
+            className={`py-2 px-4 border text-[10px] md:text-[14px] max-w-[40%] rounded ${mode === "Classic" ? "bg-lightRed border-lightRed text-white" : "bg-darkBlue2 border-lightRed"}`}
+            onClick={() => handleModeChange("Classic")}
+          >
+            Classic
+          </button>
+        </div>
       </div>
       <div className="flex flex-col m-2">
         <h2>Type: </h2>
-        <Radio.Group
-          onChange={handleTypeChange}
-          value={type}
-          className="flex text-white m-3"
-        >
-          <Radio value="public" className="text-white">
+        <div className="flex space-x-2">
+          <label>         
+            <input
+              type="radio"
+              value="public"
+              checked={type === "public"}
+              onChange={handleTypeChange}
+            />
             public
-          </Radio>
-          <Radio value="private" className="text-white">
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="private"
+              checked={type === "private"}
+              onChange={handleTypeChange}
+            />
             private
-          </Radio>
-        </Radio.Group>
+          </label>
+        </div>
       </div>
       <button
         className="rounded-md w-[30%] h-[40%] self-center bg-lightRed"
