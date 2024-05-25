@@ -46,8 +46,13 @@
 }
 
 .input-placeholder::placeholder {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #a0a0a0;
+  padding-left: 4px;
+}
+
+.numberInput {
+  text-align: center;
 }
 
 body {

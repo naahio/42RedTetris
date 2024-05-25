@@ -4,12 +4,14 @@ import logo from '../assets/images/logo.png';
 import menu from '../assets/images/menu.png';
 import close from '../assets/images/close.png';
 import Signup from '../components/login/singUp';
+import OTP from '../components/login/OtpField';
 
 function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [closeMenu, setcloseMenu] = useState(true);
     const [showSignup, setShowSignup] = useState(false);
+    const [showOTP, setShowOTP] = useState(false);
     const navigate = useNavigate();
 
     const isAuthenticated = () => {
@@ -69,7 +71,7 @@ function Header() {
                                 </div>
                                 <div className='flex w-[70%] items-center justify-center min-w-[69px] max-w-[150px]'>
                                     <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '>
-                                 http://localhost:5173/Queue       <button className='' onClick={handlePlayClick}>
+                                      <button className='' onClick={handlePlayClick}>
                                             play
                                         </button>
                                     </Link>
@@ -106,7 +108,8 @@ function Header() {
                     </div>
                 )}
             </nav>
-            {showSignup && <Signup showSignup={showSignup} setShowSignup={setShowSignup} />}
+            {showSignup && <Signup showSignup={showSignup} setShowSignup={setShowSignup} setShowOPT={setShowOTP}/>}
+            {showOTP && <OTP showSignup={showSignup} setShowSignup={setShowSignup} setShowOPT={setShowOTP}/>}
         </header>
     );
 }

@@ -19,3 +19,20 @@ export type Game ={
     mode: string;
     players: Array<Player>;
 }
+
+export type SignUpForm ={
+    firstName: string;
+    lastName: string;
+    nickName: string;
+    email:  string;
+    password: string;
+}
+
+export type OTPForm ={
+    firstDegit: number;
+    secondDegit: number;
+    thirdDegit: number;
+    fourthDegit:  number;
+    fifthDegit: number;
+    sixthDegit: number;
+}
