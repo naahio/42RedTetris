@@ -8,16 +8,18 @@ import HoldBlock from '../../components/game/HoldBlock';
 import TimeCounter from '../../components/game/TimeCounter';
 import { useState } from 'react';
 import { GameInfo } from '../../components/game/GameInfo';
-import { FaCircleInfo } from "react-icons/fa6";
+import { FaCircleInfo } from "react-icons/fa6"
+
 
 function GamePlay() {
 
-    const { state } = useLocation()
-    const [stopTimer, setStopTimer] = useState(false);
-    const [showGameInfo, setShowGameInfo] = useState(false);
-    const game: Game = state.game;
-    const {board, startGame, isPlaying, score, upcomingBlocks, ClearedLines} = useTetris();
+  const { state } = useLocation()
+  const [stopTimer, setStopTimer] = useState(false);
+  const [showGameInfo, setShowGameInfo] = useState(false);
+  const game: Game = state.game;
+  const {board, startGame, isPlaying, score, upcomingBlocks, ClearedLines} = useTetris();
 
+ 
     {/* <div className='restart '>
         {!isPlaying ? null:(
         <button onClick={startGame} className='text-white hover:text-lightRed'>restart</button>

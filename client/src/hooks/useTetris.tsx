@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { BOARD_HEIGHT, getEmptyBoard, getRandomBlock, hasCollisions, TetrisMoves } from './TetrisMoves'
 import { useInterval } from './UseInterval';
 import { Block, BlockShape, BoardShape, EmptyCell, SHAPES } from '../interfaces/types';
+import OST from '../assets/audio/Invasion.mp3';
 
 enum TickSpeed {
   Normal = 1000,
@@ -11,6 +12,8 @@ enum TickSpeed {
   Instance = -2,
 }
 
+
+
 export function useTetris() {
   const [score, setScore] = useState(0);
   const [ClearedLines, setClearedLines] = useState(0);
@@ -19,18 +22,23 @@ export function useTetris() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [tickSpeed, setTickSpeed] = useState<TickSpeed | null>(null);
   const [pauseGame, setPauseGame] = useState(false);
+  const [playAudio, setPlayAudio] = useState(true);
 
   const [
     { board, droppingRow, droppingColumn, droppingBlock, droppingShape },
     dispatchBoardState,
   ] = TetrisMoves();
 
+  const ost = new Audio(OST);
+
   const startGame = useCallback(() => {
+    setPlayAudio(true);
     const startingBlocks = [
       getRandomBlock(),
       getRandomBlock(),
     ];
     setScore(0);
+    ost.play();
     setUpcomingBlocks(startingBlocks);
     setIsCommitting(false);
     setIsPlaying(true);
@@ -58,7 +66,7 @@ export function useTetris() {
     for (let row = BOARD_HEIGHT - 1; row >= 0; row--) {
       if (newBoard[row].every((entry) => entry !== EmptyCell.Empty)) {
         numCleared++;
-        setClearedLines(numCleared);
+        setClearedLines(ClearedLines + numCleared);
         newBoard.splice(row, 1);
       }
     }
@@ -69,6 +77,7 @@ export function useTetris() {
 
     if (hasCollisions(board, SHAPES[newBlock].shape, 0, 3)) {
       setIsPlaying(false);
+      ost.pause();
       setTickSpeed(null);
     } else {
       setTickSpeed(TickSpeed.Normal);
