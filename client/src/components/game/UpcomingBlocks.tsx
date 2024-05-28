@@ -6,7 +6,7 @@ interface Props {
 
 function UpcomingBlocks({ upcomingBlocks }: Props) {
   return (
-    <div className="upcoming flex flex-col bg-darkBlue3 rounded-md items-center justify-center">
+    <div className="upcoming flex flex-col shrink-0 bg-darkBlue3 rounded-md items-center justify-center">
       next
       {upcomingBlocks.map((block, blockIndex) => {
         const shape = SHAPES[block].shape.filter((row) =>

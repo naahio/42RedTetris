@@ -36,3 +36,9 @@ export type OTPForm ={
     fifthDegit: number;
     sixthDegit: number;
 }
+
+export type TimeDisplay ={
+    hours: number;
+    minutes: number;
+    seconds: number;
+}

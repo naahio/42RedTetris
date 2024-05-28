@@ -78,7 +78,7 @@ button {
 }
 
 .board {
-  border: 2px solid #141F32;
+  border: 2px solid black;
   user-select: none;
   margin: auto;
   grid-area: game;
@@ -135,4 +135,15 @@ button {
 .cell.Z {
   background-color: rgb(208, 12, 12);
   border-radius: 5px;
+}
+
+.modal-container {
+  background-color: rgba(13, 13, 26, 0.5);
+  position: fixed;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

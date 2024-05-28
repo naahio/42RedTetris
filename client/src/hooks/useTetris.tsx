@@ -7,7 +7,8 @@ enum TickSpeed {
   Normal = 1000,
   Sliding = 100,
   Fast = 50,
-  instance = -2,
+  Pause = 100000000,
+  Instance = -2,
 }
 
 export function useTetris() {
@@ -17,7 +18,8 @@ export function useTetris() {
   const [isCommitting, setIsCommitting] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [tickSpeed, setTickSpeed] = useState<TickSpeed | null>(null);
-  
+  const [pauseGame, setPauseGame] = useState(false);
+
   const [
     { board, droppingRow, droppingColumn, droppingBlock, droppingShape },
     dispatchBoardState,
@@ -163,12 +165,25 @@ export function useTetris() {
         updateMovementInterval();
       }
 
+      if (event.key === 'p') {
+        if (!pauseGame) {
+          setPauseGame(true);
+          setTickSpeed(TickSpeed.Pause);
+        }
+      }
+      if (event.key === 'o') {
+        if (!pauseGame) {
+          setPauseGame(false);
+          setTickSpeed(TickSpeed.Normal);
+        }
+      }
+
       if (event.key === 'ArrowRight') {
         isPressingRight = true;
         updateMovementInterval();
       }
       if (event.key === ' ') {
-        setTickSpeed(TickSpeed.instance);
+        setTickSpeed(TickSpeed.Instance);
       }
     };
 
@@ -183,7 +198,6 @@ export function useTetris() {
         isPressingLeft = false;
         updateMovementInterval();
       }
-
       if (event.key === 'ArrowRight') {
         isPressingRight = false;
         updateMovementInterval();

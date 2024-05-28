@@ -46,7 +46,7 @@ function Header() {
 
     return (
         <header>
-            <nav className=''>
+            <nav className='z-0'>
                 <div className='md:border-b border-sidebar bg-darkBlue0 md:bg-darkBlue2 relative'>
                     <div className='flex justify-center items-center px-4 py-2 '>
                         <div className='flex justify-center  md:w-[40%]'>
@@ -109,7 +109,7 @@ function Header() {
                 )}
             </nav>
             {showSignup && <Signup showSignup={showSignup} setShowSignup={setShowSignup} setShowOPT={setShowOTP}/>}
-            {showOTP && <OTP showSignup={showSignup} setShowSignup={setShowSignup} setShowOPT={setShowOTP}/>}
+            {!showSignup && showOTP && <OTP showSignup={showSignup} setShowSignup={setShowSignup} setShowOPT={setShowOTP}/>}
         </header>
     );
 }

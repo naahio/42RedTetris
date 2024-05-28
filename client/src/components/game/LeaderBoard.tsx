@@ -10,7 +10,7 @@ function LeaderBoard() {
   useEffect(() => {
     const fetchPlayers = async () => {
       try {
-        const response = await axios.get('http://localhost:3004/Players');
+        const response = await axios.get('http://10.12.12.2:3004/Players');
         if (response.status === 200) {
           setPlayers(response.data);
         }

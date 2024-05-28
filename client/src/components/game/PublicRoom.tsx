@@ -8,7 +8,7 @@ function PublicRoom() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const response: AxiosResponse = await axios.get('http://localhost:3004/Room');
+        const response: AxiosResponse = await axios.get('http://10.12.12.2:3004/Room');
         if (response.status === 200) {
           setRooms(response.data);
         }

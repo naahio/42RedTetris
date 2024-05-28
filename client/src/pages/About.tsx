@@ -2,11 +2,11 @@
 
 function AboutPage() {
     return (
-        <div className="flex flex-col h-[100%] w-[100%]  border text-white text-base items-center ">
+        <div className="flex flex-col h-[100%] w-[100%] text-white text-base items-center mt-5">
          <h3>Welcome to our project, <span className='text-xl text-lightRed'>RedTetris!</span></h3>
 
-            <p>What is RedTetris?
-                RedTetris is an exciting project developed as part of the 42 Network community. It is an online multiplayer version of the classic game Tetris. Our goal is to bring the timeless enjoyment of Tetris to a multiplayer platform, allowing players to compete against each other in real-time, adding a new dimension of challenge and fun to the game.
+            <p>What is RedTetris ?</p>
+               <p className="ml-5 mt-5">RedTetris is an exciting project developed as part of the 42 Network community. It is an online multiplayer version of the classic game Tetris. Our goal is to bring the timeless enjoyment of Tetris to a multiplayer platform, allowing players to compete against each other in real-time, adding a new dimension of challenge and fun to the game.
 
                 Our Mission
                 At RedTetris, our mission is to create a vibrant and engaging gaming experience that brings people together from all walks of life. We believe in the power of games to foster connections, stimulate creativity, and provide moments of joy and excitement.

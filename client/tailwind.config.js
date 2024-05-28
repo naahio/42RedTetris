@@ -45,6 +45,9 @@ module.exports = {
           joinBlue: '#51A9E3',
           nextBlock: '#21314D',
           nextBlockbg: "#12"
+        },
+        zIndex: {
+          '100': '10000',
         }
       }
   },
