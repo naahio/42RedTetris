@@ -52,22 +52,22 @@ function OTP({setShowOPT}: SignupProps) {
                 </div>
                 <form onSubmit={handleSignUp} className='flex flex-col space-y-6 items-center space-y-2 w-full max-w-sm'>
                     <div className='flex flex-row space-x-3 '>
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full' type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full' type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setFirstDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full 'type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full 'type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setSecondDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setThirdDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setFourthDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setFifthDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
-                        <input className='border numberInput w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
+                        <input className='border numberInput w-[50%] min-w-[40px] h-[40px] rounded-md w-full ' type='number' required min="0" max="9" step="1" 
                             onChange={(e) => {setSixthDegit(Number(e.target.value)), handelPassInput(e)}}
                             />
                     </div>

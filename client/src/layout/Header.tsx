@@ -70,11 +70,11 @@ function Header() {
                                     </div>
                                 </div>
                                 <div className='flex w-[70%] items-center justify-center min-w-[69px] max-w-[150px]'>
-                                    <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '>
-                                      <button className='' onClick={handlePlayClick}>
+                                    {/* <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white h-[80%] w-[60%] '> */}
+                                      <button className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] h-[70%]' onClick={handlePlayClick}>
                                             play
                                         </button>
-                                    </Link>
+                                    {/* </Link> */}
                                 </div>
                             </div>
                         )}
@@ -91,11 +91,11 @@ function Header() {
                                 <Link to="/about" className='block text-white hover:text-lightRed mt-2'>
                                     About us
                                 </Link>
-                                <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] '>
-                                    <button className='' onClick={handlePlayClick}>
+                                {/* <Link to="#" className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] '> */}
+                                    <button className='flex justify-center items-center bg-lightRed rounded-md text-white w-[80%] ' onClick={handlePlayClick}>
                                         play
                                     </button>
-                                </Link>
+                                {/* </Link> */}
                             </div>
                         </div>
                     )}
