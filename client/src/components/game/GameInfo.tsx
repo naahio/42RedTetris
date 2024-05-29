@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Game } from "../../interfaces/data";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
@@ -8,14 +9,14 @@ interface GameInfoProps {
 
 export const GameInfo: React.FC<GameInfoProps> = ({ game, setShowSignup }) => {
     return (
-        <div className="border rounded-lg w-[30%] text-center slef-ends border-lightRed">
+        <div className="justify-around border rounded-lg w-[30%] m-2 slef-ends border-lightRed">
             <IoMdCloseCircleOutline onClick={() => setShowSignup(false)} className="cursor-pointer"/>
-            <span>{game.mode} : {game.type}</span><br/>
-            <span className='text-red-600	'>arrows left/right</span> : move<br/>
-            <span className='text-red-600	'>arrow up</span> : rotate<br/>
-            <span className='text-red-600	'>arrow down</span> : fast drop<br/>
-            <span className='text-red-600	'>p</span>        key : pause game<br/>
-            <span className='text-red-600	'>o</span> key : resume game<br/>
+            <span className="items-center">{game.mode} : {game.type}<br/></span>
+            <span className=''>arrows left/right: move<br/></span>
+            <span className=''>arrow up: rotate<br/></span>
+            <span className=''>arrow down: fast drop<br/></span>
+            <span className=''>p       key : pause game<br/></span>
+            <span className=''>okey : resume game<br/></span>
       </div>
     )
 }

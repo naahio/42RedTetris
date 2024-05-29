@@ -3,6 +3,8 @@ import { BOARD_HEIGHT, getEmptyBoard, getRandomBlock, hasCollisions, TetrisMoves
 import { useInterval } from './UseInterval';
 import { Block, BlockShape, BoardShape, EmptyCell, SHAPES } from '../interfaces/types';
 import OST from '../assets/audio/Invasion.mp3';
+// import OST2 from '../assets/audio/Vampire.mp3';
+
 
 enum TickSpeed {
   Normal = 1000,
@@ -22,7 +24,7 @@ export function useTetris() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [tickSpeed, setTickSpeed] = useState<TickSpeed | null>(null);
   const [pauseGame, setPauseGame] = useState(false);
-  const [playAudio, setPlayAudio] = useState(true);
+  // const [playAudio, setPlayAudio] = useState(true);
 
   const [
     { board, droppingRow, droppingColumn, droppingBlock, droppingShape },
@@ -32,7 +34,7 @@ export function useTetris() {
   const ost = new Audio(OST);
 
   const startGame = useCallback(() => {
-    setPlayAudio(true);
+    // setPlayAudio(true);
     const startingBlocks = [
       getRandomBlock(),
       getRandomBlock(),
@@ -67,6 +69,7 @@ export function useTetris() {
       if (newBoard[row].every((entry) => entry !== EmptyCell.Empty)) {
         numCleared++;
         setClearedLines(ClearedLines + numCleared);
+
         newBoard.splice(row, 1);
       }
     }
@@ -83,6 +86,7 @@ export function useTetris() {
       setTickSpeed(TickSpeed.Normal);
     }
     setUpcomingBlocks(newUpcomingBlocks);
+
     setScore((prevScore) => prevScore + getPoints(numCleared));
     dispatchBoardState({
       type: 'commit',
